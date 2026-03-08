@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- Defines HTML5 document type -->
+<html>
+
+<head>
+<style>
+
+/* Style the main heading */
+h1 {
+  text-align: center;            /* Center the heading */
+  text-transform: capitalize;    /* Capitalize first letter of each word */
+}
+
+/* Style the main list container */
+.Main-List {
+  list-style: none;   /* Remove default bullet points */
+  padding: 0;         /* Remove default padding */
+  width: 60%;         /* Set width of list */
+  margin: 0 auto;     /* Center the list horizontally */
+}
+
+/* Style each main list item */
+.Main-List > li {
+  padding: 10px;                   /* Space inside each item */
+  margin: 6px 0;                   /* Space between items */
+  background-color: blanchedalmond; /* Light background color */
+}
+
+/* Hide the checkbox (used only for functionality) */
+.Main-List input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the clickable label (acts like a header) */
+.Main-List label {
+  cursor: pointer;     /* Show hand cursor when hovering */
+  display: block;      /* Make label take full width */
+  padding: 10px;       /* Add space inside label */
+}
+
+/* Style the nested list (sub-topics) */
+.Main-List ul {
+  max-height: 0;           /* Initially hide the sub list */
+  overflow: hidden;        /* Hide overflowing content */
+  transition: max-height 0.3s ease; /* Smooth expand animation */
+  list-style: none;        /* Remove bullet points */
+  padding-left: 20px;      /* Indent nested items */
+  background: #f9f9f9;     /* Light background color */
+}
+
+/* When checkbox is checked, expand the sub list */
+.Main-List input:checked + label + ul {
+  max-height: 200px; /* Show the list (expand) */
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>topics to cover</h1> <!-- Page title -->
+
+<ul class="Main-List"> <!-- Main list container -->
+
+  <!-- Simple list item -->
+  <li>Basics</li>
+
+  <!-- Collapsible section for Functions -->
+  <li>
+
+    <!-- Hidden checkbox used to control toggle -->
+    <input type="checkbox" id="functions">
+
+    <!-- Clicking this label checks/unchecks the checkbox -->
+    <label for="functions">Functions</label>
+
+    <!-- Sub list that will expand/collapse -->
+    <ul>
+      <li>First</li>
+      <li>Second</li> <!-- More items can be added here -->
+    </ul>
+
+  </li>
+
+  <!-- Collapsible section for DSA -->
+  <li>
+
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="dsa">
+
+    <!-- Label linked to checkbox -->
+    <label for="dsa">DSA</label>
+
+    <!-- Sub topics -->
+    <ul>
+      <li>Arrays</li>
+      <li>Linked Lists</li>
+      <li>Trees</li> <!-- Easy to expand with more topics -->
+    </ul>
+
+  </li>
+
+  <!-- Normal list items -->
+  <li>OOP</li>
+  <li>Exception Handling</li>
+  <li>File Handling</li>
+  <li>Database Handling</li>
+  <li>Packages n Libraries</li>
+  <li>Data Science WebDevelopment</li>
+
+</ul>
+
+</body>
+</html>
