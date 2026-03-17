@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The Veggie Basket </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    /*-----------------------------------*\ 
+  #RESET
+\*-----------------------------------*/
+html {
+  /*specifies the font*/
+  font-family: "Rubik", sans-serif;
+  /*scrolling behavior for a scrolling box*/
+  scroll-behavior: smooth;
+}
+
+li {
+  /*emove the markers/bullets*/
+  list-style: none;
+}
+
+a {
+  /*inherit from value from its parent element*/
+  font: inherit;
+  /*remove underlines from links*/
+  text-decoration: none;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+/*-----------------------------------*\ 
+  #MAIN CONTAINER
+\*-----------------------------------*/
+
+.main-container {
+  /*relative to the first parent element*/
+  position: relative;
+  max-width: 1440px;
+  /* center align HTML elements*/
+  margin: auto;
+  background: #ffffff;
+  /* if overflow -hidden from view*/
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.layout_padding {
+  padding-top: 110px;
+  padding-bottom: 0px;
+}
+
+/*-----------------------------------*\ 
+  #HEADER
+\*-----------------------------------*/
+/* Styles for the navigation bar */
+.navbar {
+  /* Fix the navbar to the top of the viewport */
+  position: fixed;
+  top: 0;
+  /* Center the navbar horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Set the width to 100% of the viewport */
+  width: 100%;
+  /* Add padding to the navbar */
+  padding: 10px 30px 10px 10px;
+  /* Set background color with transparency */
+  background: hsla(0, 0%, 100%, 0.99);
+  /* Add a bottom border with slight transparency */
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
+  /* Add a shadow effect */
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.05);
+  /* Set z-index to ensure the navbar is above other content */
+  z-index: 5;
+}
+
+/* Styles for the navbar wrapper */
+.navbar-wrapper {
+  /* Lay out child elements in a row and evenly distribute space between them */
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styles for the navbar links */
+.navbar-nav {
+  /* Reset position to default */
+  position: static;
+  /* Set opacity to fully opaque */
+  opacity: 1;
+  /* Set width and height to auto */
+  width: auto;
+  height: auto;
+  /* Lay out child elements in a row */
+  display: flex;
+  flex-direction: row;
+  /* Align child elements to the left */
+  align-items: left;
+  /* Add space between child elements */
+  gap: 30px;
+}
+
+/* Styles for individual navbar links */
+.nav-link {
+  /* Set link color */
+  color: #4a920d;
+  /* Set font size */
+  font-size: 22px;
+  /* Add transition effect with a slow start */
+  transition: 0.25s ease;
+}
+
+/* Styles for navbar links on hover */
+.nav-link:hover {
+  /* Change link color on hover */
+  color: #9ACD32;
+}
+
+/*-----------------------------------*\ 
+    #HOME
+  \*-----------------------------------*/
+/* Styles for the .home section */
+.home {
+  /* Grid layout - row and column */
+  display: grid;
+  /* Divide into 2 columns */
+  grid-template-columns: 1fr 1fr;
+  /* Center content vertically */
+  align-items: center;
+  /* Add gap between grid items */
+  gap: 50px;
+}
+
+/* Styles for the left side of the .home section */
+.home-left {
+  /* Center text horizontally */
+  text-align: center;
+  /* Set font size */
+  font-size: 42px;
+  /* Set font weight */
+  font-weight: 600;
+  /* Set line height */
+  line-height: 1.1;
+  /* Set spacing between letters */
+  letter-spacing: 2px;
+  /* Add margin at the bottom */
+  margin-bottom: 30px;
+  /* Set text color */
+  color: #4a920d;
+}
+
+/* Styles for paragraphs inside .home-left */
+.home-left p {
+  /* Set font size */
+  font-size: 20px;
+  /* Display as inline block */
+  display: inline-block;
+  /* Add padding around paragraph */
+  padding: 3px;
+  /* Set spacing between letters */
+  letter-spacing: 5px;
+  /* Add margin at the bottom */
+  margin-bottom: 10px;
+  /* Set text color */
+  color: #999999;
+}
+
+/* Styles for the right side of the .home section */
+.home-right {
+  /* Set position to relative */
+  position: relative;
+  /* Set aspect ratio to maintain square shape */
+  aspect-ratio: 1 / 1;
+  /* Add padding to the top */
+  padding-top: 20%;
+}
+
+/* Styles for vegetable image */
+.veg-img {
+  /* Set position to absolute */
+  position: absolute;
+  /* Set width to 90% of containing block */
+  width: 90%;
+}
+/*-----------------------------------*\ 
+  #About
+\*-----------------------------------*/
+
+/* Styles for the about section */
+.about {
+  /* Set display to flex for flexbox layout */
+  display: flex;
+  /* Arrange flex items in a column */
+  flex-direction: column;
+  /* Prevent flex items from wrapping */
+  flex-wrap: nowrap;
+  /* Align flex items along the center of the main axis */
+  align-items: center;
+}
+
+/* Styles for the left side of the about section */
+.about-left img {
+  /* Set image height to 100% of container */
+  height: 100%;
+  /* Ensure image covers the entire container */
+  object-fit: cover;
+  /* Set image width to 700px */
+  width: 700px;
+  /* Add padding around the image */
+  padding: 10px;
+  /* Align content of flex container to the center */
+  align-content: center;
+}
+
+/* Styles for the right side of the about section */
+.about-right {
+  /* Set width of the right side container to 500px */
+  width: 500px;
+  /* Center text within the container */
+  text-align: center;
+  /* Add margin around the container */
+  margin: 50px;
+}
+
+/* Styles for the title in the right side of the about section */
+.about-right-title {
+  /* Add margin below the title */
+  margin-bottom: 30px;
+  /* Set text color to green */
+  color: #4a920d;
+  /* Add margin to the left of the title */
+  margin-left: 100px;
+}
+
+/* Styles for the paragraphs in the right side of the about section */
+.about-right-p {
+  /* Set maximum width for paragraphs */
+  max-width: 80%;
+  /* Add margin to the left of paragraphs */
+  margin-left: 100px;
+  /* Set line height to 30px */
+  line-height: 30px;
+  /* Set font size to 18px */
+  font-size: 18px;
+  /* Set text color to light gray */
+  color: #999999;
+  /* Set font weight to 400 (normal) */
+  font-weight: 400;
+}
+
+.about_title {
+  width: 100%;
+  float: left;
+  font-size: 50px;
+  color: #4a920d;
+  font-weight: bold;
+  text-align: center;
+}
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap')
+  </style>
+  <link rel="icon" type="image/x-icon" href="feb.png">
+</head>
+
+
+
+  <body>
+    <!-- Header section -->
+    <div class="main-container">
+      <!-- - #HEADER  -->
+      <header>
+        <nav class="navbar">
+          <div class="navbar-wrapper">
+            <a href="#">
+              <img src="" alt="The Veggie Basket" width="180" height="80">
+            </a>
+            <ul class="navbar-nav">
+              <li><a href="index.html" class="nav-link">HOME</a></li>
+              <li><a href="vegetables.html" class="nav-link">VEGETABLES</a> </li>
+              <li><a href="cookbook.html" class="nav-link">COOKBOOKs</a> </li>
+              <li><a href="about.html" class="nav-link">ABOUT</a></li>
+              <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <!-- Header section end -->
+
+    <!-- Banner section -->
+    <section class="home layout_padding" id="home ">
+      <div class="home-left">
+        <p> We have faster safe delivery </p>
+        <h1>Vegetables Shop</h1>
+        <h1> Bringing the Garden to Your Screen.</h1>
+      </div>
+      <div class="home-right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhdtynuHQPDozlCqwPndBGjP7XKrIC7XCxgg&s" alt="veg image" class="veg-img" width="400" loading="lazy">
+      </div>
+    </section>
+    <!-- Banner section end -->
+
+    <!-- About section -->
+    <section id="about" class="about">
+      <div class="image_2"><img src="images/img-2.png"></div>
+      <h1 class="about_title">About Our Shop</h1>
+      <div class="about-left">
+        <img src="images/img-3.png" alt="about image" width="350">
+      </div>
+      <div id="about-right">
+        <h2 class="about-right-title">We are doing more than you expect</h2>
+        <p class="about-right-p">
+          Welcome to The Veggie Basket,
+          Online vegetable shops have revolutionized the way we fill our crispers. Imagine browsing a virtual farm
+          stand, selecting the ripest tomatoes and crispest lettuce with a tap, all from the comfort of your couch. No
+          more
+          battling crowds or wilted produce – these stores deliver farm-fresh goodness straight to your door. Whether
+          you're seeking exotic finds, organic options, or simply the convenience of grocery shopping in your PJs,
+          online vegetable shops cater to every taste and lifestyle. With flexible delivery options and competitive
+          prices,
+          they're sprouting up as a healthy alternative to traditional supermarkets, offering a bushel of benefits for
+          busy bees and health-conscious cooks alike. So, ditch the grocery bags and embrace the digital harvest –your
+          taste buds and schedule will thank you!
+        </p>
+      </div>
+    </section>
+    <!-- About section end -->
+
+    <!-- Choose section -->
+    <section class="choose_section "></section>
+    <!-- Choose section end -->
+
+    <!-- Vegetables section -->
+    <section class="vegetables_section"></section>
+    <!-- Vegetables section end -->
+
+    <!-- Testimonial section -->
+    <section class="testimonial_section "></section>
+    <section id="testimonials" class="testimonials"></section>
+    <!-- Testimonial section end -->
+
+    <!-- Contact section -->
+    <section class="contact_section"></section>
+    <!-- Contact section end -->
+
+    <!-- Footer section -->
+    <section class="footer_section"></section>
+    <!-- Footer section end -->
+
+    <!-- Copyright section -->
+    <section class="copyright_section"> </section>
+    <!-- Copyright section end -->
+  </body>
+
+
+
+</html>
