@@ -1,0 +1,41 @@
+# ===========================
+# TOKENS - smallest units of code
+# ===========================
+
+# Keywords are special reserved words (you can't rename them!)
+if True:
+    print("Hello!")  # 'if', 'True', and 'print' are all KEYWORDS
+
+# Identifiers are names YOU give to things
+my_name = "Sara"       # 'my_name' is an identifier (variable name)
+favorite_number = 7    # 'favorite_number' is also an identifier
+
+# Literals are fixed values written directly in code
+age = 9                # 9 is a literal (a number)
+city = "Karachi"       # "Karachi" is a literal (text)
+
+# Operators do math or comparisons
+total = 5 + 3          # '+' is an operator
+is_big = age > 5       # '>' is also an operator
+
+# Punctuators are symbols like : , () [] {}
+scores = [10, 20, 30]  # '[', ']', and ',' are punctuators
+
+
+# ===========================
+# IDENTIFIERS - naming rules
+# ===========================
+
+student_name = "Ali"   # ✅ starts with a letter — VALID
+_score = 100           # ✅ starts with underscore — VALID
+score1 = 95            # ✅ letter first, number after — VALID
+
+# 1score = 90          # ❌ cannot START with a number
+# my score = 80        # ❌ no spaces allowed
+# my@score = 70        # ❌ no special characters
+
+# Python is case sensitive!
+Score = 50
+score = 99
+print(Score)           # prints 50
+print(score)           # prints 99 — these are TWO different variables!
